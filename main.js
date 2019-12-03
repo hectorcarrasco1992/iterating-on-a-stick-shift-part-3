@@ -116,24 +116,69 @@ const makeAllExtinct = function(dinos) {
 const carnivoresOnly = function(dinos) {
   const newArr = []
 
-  dinos.forEach(dinos => newArr.push(isCarnivore(dinos)))
+  dinos.forEach(dinos => isCarnivore(dinos) ? newArr.push(dinos) : "")
+
+  console.log(newArr)
+  
 
   return newArr
 }
 
 const herbivoresOnly = function(dinos) {
+  const newArr = []
+
+  dinos.forEach(dinos => isCarnivore(dinos) ? '' : newArr.push(dinos))
+
+  console.log(newArr)
+  
+
+  return newArr
+
 }
 
+  
 const extinctOnly = function(dinos) {
+  const newArr = []
+
+  dinos.forEach(dinos => isExtinct(dinos) ? newArr.push(dinos) : '')
+
+  console.log(newArr)
+  
+
+  return newArr
 }
 
 const notExtinct = function(dinos) {
+  const newArr = []
+
+  dinos.forEach(dinos => isExtinct(dinos) ? '' : newArr.push(dinos))
+
+  console.log(newArr)
+  
+
+  return newArr
 }
 
 const triassicOnly = function(dinos) {
+  const newArr = []
+
+  dinos.forEach(dinos => isTriassic(dinos) ? newArr.push(dinos) : '')
+
+  console.log(newArr)
+  
+
+  return newArr
 }
 
 const notTriassic = function(dinos) {
+  const newArr = []
+
+  dinos.forEach(dinos => isTriassic(dinos) ? '' : newArr.push(dinos))
+
+  console.log(newArr)
+  
+
+  return newArr
 }
 
 
